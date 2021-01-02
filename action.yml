@@ -1,0 +1,17 @@
+name: 'Render and build OpenSCAD project'
+description: 'OpenSCAD renderer and builder on github actions'
+author: 'flat35hd99'
+
+branding:
+  icon: 'terminal'
+  color: 'blue'
+
+inputs:
+  command:
+    description: 'Command.'
+    required: true
+    default: 'echo Command is required'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
