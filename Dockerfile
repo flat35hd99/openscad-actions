@@ -1,4 +1,6 @@
-FROM openscad/appimage-x86_64-base
+FROM alpine:latest
+
+RUN apk --no-cache add openscad
 
 COPY entrypoint.sh /root/
 ENTRYPOINT ["/root/entrypoint.sh"]
