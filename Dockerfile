@@ -5,5 +5,5 @@ RUN apt update \
   && apt clean \
   && rm -rf /var/lib/apt/lists/*
 
-COPY entrypoint.sh /root/
-ENTRYPOINT ["/root/entrypoint.sh"]
+COPY entrypoint.sh ./
+ENTRYPOINT ["./entrypoint.sh"]
