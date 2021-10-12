@@ -11,7 +11,7 @@ steps:
   - name: Setup
     uses: actions/checkout@v2
   - name: Build stl file
-    uses: flat35hd99/openscad-actions@v0.2
+    uses: flat35hd99/openscad-actions@latest
     with:
       scad_file: test/test.scad
       output_file: test.stl
