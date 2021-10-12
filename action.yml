@@ -19,5 +19,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.file }}
-    - ${{ inputs.output }}
+    - ${{ inputs.scad_file }}
+    - ${{ inputs.output_format }}
