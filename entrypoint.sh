@@ -1,6 +1,6 @@
 #!/bin/sh -leux
 
-file="${1}"
-output_option="${2}"
+input_file="${1}"
+output_file="${2}"
 
-openscad -o $output_option $file
+openscad -o $output_file $input_file

@@ -10,7 +10,7 @@ inputs:
   scad_file:
     description: 'Input file'
     required: true
-  output_format:
+  output_file:
     description: 'Output specified file'
     required: true
     default: 'stl'
@@ -20,4 +20,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.scad_file }}
-    - ${{ inputs.output_format }}
+    - ${{ inputs.output_file }}

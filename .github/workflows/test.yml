@@ -13,9 +13,9 @@ jobs:
         uses: ./
         with:
           scad_file: test/test.scad
-          output_format: stl
+          output_file: test.stl
       - name: Upload stl file as artifact
         uses: actions/upload-artifact@v2
         with:
           name: built_stl
-          path: test/test.stl
+          path: test.stl
