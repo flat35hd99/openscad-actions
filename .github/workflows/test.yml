@@ -1,0 +1,21 @@
+name: Test Github Actions
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        uses: actions/checkout@v2
+      - name: Build stl file
+        uses: ./
+        with:
+          scad_file: test/test.scad
+          output_format: stl
+      - name: Upload stl file as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: built_stl
+          path: test/test.stl

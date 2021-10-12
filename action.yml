@@ -7,10 +7,10 @@ branding:
   color: 'blue'
 
 inputs:
-  file:
+  scad_file:
     description: 'Input file'
     required: true
-  output:
+  output_format:
     description: 'Output specified file'
     required: true
     default: 'stl'
