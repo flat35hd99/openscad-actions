@@ -7,11 +7,18 @@ branding:
   color: 'blue'
 
 inputs:
-  command:
-    description: 'Command.'
+  file:
+    description: 'Input file'
     required: true
-    default: 'echo Command is required'
+  output:
+    description: 'Output specified file'
+    required: true
+    default: 'stl'
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  entrypoint: 'entrypoint.sh'
+  args:
+    - ${{ inputs.file }}
+    - ${{ inputs.output }}

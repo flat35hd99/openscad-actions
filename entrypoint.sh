@@ -1,3 +1,6 @@
-#!/bin/sh -l
+#!/bin/sh -leux
 
-eval $1
+file="${1}"
+output_option="${2}"
+
+openscad -o $output_option $file
