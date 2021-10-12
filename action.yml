@@ -1,5 +1,5 @@
-name: 'Render and build OpenSCAD project'
-description: 'OpenSCAD renderer and builder on github actions'
+name: 'Build OpenSCAD project'
+description: 'Build .scad file on github actions'
 author: 'flat35hd99'
 
 branding:
@@ -13,7 +13,7 @@ inputs:
   output_file:
     description: 'Output specified file'
     required: true
-    default: 'stl'
+    default: 'built.stl'
 
 runs:
   using: 'docker'
