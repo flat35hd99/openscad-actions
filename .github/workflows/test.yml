@@ -19,3 +19,4 @@ jobs:
         with:
           name: built_stl
           path: test.stl
+          options: "-D size1=10 -D size2=100"

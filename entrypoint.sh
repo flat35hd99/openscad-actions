@@ -2,5 +2,6 @@
 
 input_file="${1}"
 output_file="${2}"
+options="${3}"
 
-openscad -o $output_file $input_file
+openscad $options -o $output_file $input_file
