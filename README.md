@@ -4,6 +4,7 @@ OpenSCAD environment on github actions
 ## Usage
 
 Set `scad_file` and `output_file` with extension you want to build.
+If needed set `options` as openscad command line options.
 
 ```yaml
 runs-on: ubuntu-latest
@@ -15,6 +16,7 @@ steps:
     with:
       scad_file: test/test.scad
       output_file: test.stl
+      options: "-D var=value -hardwarnings"
 ```
 
 This workflow create `test.stl` file at working directory.
