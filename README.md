@@ -29,6 +29,7 @@ You can use built file like:
   with:
     name: built_stl
     path: test.stl
+    options: "-D var=value -hardwarnings"
 ```
 
 This action use [OpenSCAD CLI](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_OpenSCAD_in_a_command_line_environment).
