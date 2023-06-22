@@ -43,8 +43,8 @@ steps:
   - name: Create galery
     uses: flat35hd99/openscad-actions@main
     with:
-      scad_file: test/
-      output_file: output/
+      scad_file: ./test/
+      output_file: ./output/
       target_format_for_bulk: png
 ```
 

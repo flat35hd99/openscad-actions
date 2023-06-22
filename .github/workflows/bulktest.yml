@@ -12,8 +12,8 @@ jobs:
       - name: Create galery
         uses: flat35hd99/openscad-actions@main
         with:
-          scad_file: test/
-          output_file: output/
+          scad_file: ./test/
+          output_file: ./output/
           target_format_for_bulk: png
       - name: commit the changes
         run: echo "Please add your upload/commit magic"
