@@ -32,3 +32,13 @@ You can use built file like:
 ```
 
 This action use [OpenSCAD CLI](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_OpenSCAD_in_a_command_line_environment).
+
+
+## Local dev of action
+
+To run the action locally, you can call the entrypoint script as well but openscad needs to be installed before.
+
+```
+./entrypoint.sh ./test/test.scad test.png "-D size1=10 -D size2=100"
+```
+
