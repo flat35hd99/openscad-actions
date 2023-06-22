@@ -16,6 +16,6 @@ jobs:
           output_file: output/
           target_format_for_bulk: png
       - name: commit the changes
-        shell: echo "Please add your upload/commit magic"
+        run: echo "Please add your upload/commit magic"
       - name: debug ouput
-        shell: ls ./output/ && cat ./output/README.md
+        run: ls ./output/ && cat ./output/README.md
