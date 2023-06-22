@@ -1,0 +1,21 @@
+name: Bulk test
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        uses: actions/checkout@v2
+      - name: Create galery
+        uses: flat35hd99/openscad-actions@main
+        with:
+          scad_file: test/
+          output_file: output/
+          target_format_for_bulk: png
+      - name: commit the changes
+        shell: echo "Please add your upload/commit magic"
+      - name: debug ouput
+        shell: ls ./output/ && cat ./output/README.md
