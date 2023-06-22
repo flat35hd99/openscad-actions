@@ -18,6 +18,10 @@ inputs:
     description: "render option"
     required: false
     default: ""
+  target_format_for_bulk:
+    description: "output format, use `png` for gaery, or stl for - you know"
+    required: false
+    default: ""
 
 runs:
   using: 'docker'
@@ -26,3 +30,4 @@ runs:
     - ${{ inputs.scad_file }}
     - ${{ inputs.output_file }}
     - ${{ inputs.options }}
+    - ${{ inputs.target_format_for_bulk }}
