@@ -10,7 +10,7 @@ jobs:
       - name: Setup
         uses: actions/checkout@v2
       - name: Create galery
-        uses: flat35hd99/openscad-actions@main
+        uses: ./
         with:
           scad_file: ./test/
           output_file: ./output/
