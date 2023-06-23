@@ -12,11 +12,11 @@ jobs:
       - name: Build stl file
         uses: ./
         with:
-          scad_file: test/test.scad
-          output_file: test.stl
+          scad_file: ./test/test.scad
+          output_file: ./output/test.stl
           options: "-D size1=10 -D size2=100"
       - name: Upload stl file as artifact
         uses: actions/upload-artifact@v2
         with:
           name: built_stl
-          path: test.stl
+          path: ./output/test.stl

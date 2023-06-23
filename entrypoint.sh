@@ -1,4 +1,4 @@
-#!/bin/sh -leux
+#!/bin/bash -leux
 
 input_file="${1}"
 output_file="${2}"
@@ -38,5 +38,3 @@ else
     echo "$input_file $output_file is not valid, must be both a directory or both a file"
     exit 1
 fi
-
-
