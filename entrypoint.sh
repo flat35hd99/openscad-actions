@@ -24,16 +24,27 @@ if [[ -d $input_file && -d $output_file ]]; then
     fi
     
     for filename in $input_file/*.scad; do
-        echo $filename
-        shortname=$output_file/$(basename $filename).$target_format_for_bulk
-        echo $shortname
-        openscad $options -o $shortname $filename
+        # remove double slashes from input
+        cleanInput="${filename//"//"/"/"}" 
+        
+        # get pasename and remove double slashes from input    
+        shortOutput=$output_file/$(basename $filename).$target_format_for_bulk
+        cleanOutput="${shortOutput//"//"/"/"}" 
+
+        echo -e "Input \e[32m$cleanInput\e[39m"
+        echo -e "Output \e[33m$cleanOutput\e[39m"
+
+        openscad $options -o $cleanOutput $cleanInput
 
         if [ "$target_format_for_bulk" == "png" ]; then
-            echo "| ![]($shortname) | [$filename]($filename) |" >> $readme
+            echo "| ![]($cleanOutput) | [$(basename $cleanInput)]($cleanInput) |" >> $readme
         fi
 
     done
+
+    if [ "$target_format_for_bulk" == "png" ]; then
+        echo "*This is a generated file from github actions, please do not change it by hand*" >> $readme
+    fi
 
 elif [[ -f $input_file ]]; then
     echo "$input_file is a single file, target format will be used from output_file"
