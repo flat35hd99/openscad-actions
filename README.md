@@ -10,7 +10,7 @@ If needed set `options` as openscad command line options.
 runs-on: ubuntu-latest
 steps:
   - name: Setup
-    uses: actions/checkout@v2
+    uses: actions/checkout@v3
   - name: Build stl file
     uses: flat35hd99/openscad-actions@v1.3
     with:
@@ -39,7 +39,7 @@ If you store multiple `.scad` files in one repo, just path the directory and it 
 runs-on: ubuntu-latest
 steps:
   - name: Setup
-    uses: actions/checkout@v2
+    uses: actions/checkout@v3
   - name: Create galery
     uses: flat35hd99/openscad-actions@main
     with:
