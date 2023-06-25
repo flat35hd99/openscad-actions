@@ -1,4 +1,4 @@
-name: Test Github Actions
+name: Test single
 on:
   push:
   pull_request:
@@ -8,15 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Build stl file
         uses: ./
         with:
-          scad_file: test/test.scad
-          output_file: test.stl
+          scad_file: ./test/test.scad
+          output_file: ./output/test.stl
           options: "-D size1=10 -D size2=100"
       - name: Upload stl file as artifact
         uses: actions/upload-artifact@v2
         with:
           name: built_stl
-          path: test.stl
+          path: ./output/test.stl
