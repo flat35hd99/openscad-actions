@@ -17,8 +17,12 @@ if [[ -d $input_file && -d $output_file ]]; then
         echo "# OpenScad Projects" > $readme
         echo "| Image | Filename |" >> $readme
         echo "| --- | --- |" >> $readme
+  
+        # setup xvfb for headless mode without xServer present on linux
+        # https://github.com/openscad/openscad/issues/1798
+        Xvfb :99 & export DISPLAY=:99
     fi
-
+    
     for filename in $input_file/*.scad; do
         echo $filename
         shortname=$output_file/$(basename $filename).$target_format_for_bulk
